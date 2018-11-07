@@ -11,20 +11,23 @@
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 
+	<script type="text/javascript" src="../js/login.js"></script>
+
+
 </head>
 <body>
 <form action="">
-  <div class="container">
+  <div class="form-group" width=50%>
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" class="form-control" placeholder="Enter Username" name="uname" required autofocus>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Login</button>
-    <label>
+    <button type="submit" onclick="local_login()" class="btn btn-default">Login</button>
+    <div class="checkbox">
       <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+    </div>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
