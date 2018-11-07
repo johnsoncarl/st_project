@@ -14,7 +14,7 @@ function local_login () {
 		alert("User Login Succussful!");
 		window.open("../welcome.html", '_top');
 	} else {
-		alert("Invalid user credentials!!");
+		window.alert("Invalid user credentials!!");
 	}
 }
 
