@@ -1,7 +1,7 @@
 function local_login () {
 
-	var uname = document.getElementsByName("user-name")[0].value;
-	var pass = document.getElementsByName('password')[0].value;
+	var uname = document.getElementsByName("uname")[0].value;
+	var pass = document.getElementsByName('psw')[0].value;
 	
 	if (uname == 'admin' && pass == 'admin123') {
 		// redirect to user page
