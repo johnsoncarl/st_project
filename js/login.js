@@ -6,13 +6,13 @@ function local_login () {
 	if (uname == 'admin' && pass == 'admin123') {
 		// redirect to user page
 		save_user(uname, pass);
-		alert("Admin Login Succussful!");
-		window.open("../welcome.html", '_top');
+		alert("Admin Login Successful!");
+		window.open("./welcome.html", '_top');
 	} else if (uname == 'user' && pass == 'user123') {
 		// redirect to admin page
 		save_user(uname, pass);
-		alert("User Login Succussful!");
-		window.open("../welcome.html", '_top');
+		alert("User Login Successful!");
+		window.open("./welcome.html", '_top');
 	} else {
 		window.alert("Invalid user credentials!!");
 	}
@@ -20,4 +20,15 @@ function local_login () {
 
 function save_user (uname, pass) {
 	sessionStorage[uname] = "loggedin";
+}
+
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
 }
