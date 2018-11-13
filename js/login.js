@@ -7,12 +7,12 @@ function local_login () {
 		// redirect to user page
 		save_user(uname, pass);
 		alert("Admin Login Succussful!");
-		window.open("../welcome.html", '_top');
+		window.open("templates/welcome.html", '_top');
 	} else if (uname == 'user' && pass == 'user123') {
 		// redirect to admin page
 		save_user(uname, pass);
 		alert("User Login Succussful!");
-		window.open("../welcome.html", '_top');
+		window.open("templates/welcome.html", '_top');
 	} else {
 		window.alert("Invalid user credentials!!");
 	}
