@@ -6,7 +6,7 @@
 
 	<link rel="stylesheet" href="../styles.css">
 
-	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
 
 	<style>
    
@@ -83,13 +83,13 @@
 <div align="center">
 <form action="">
   <div class="form-group" >
-    <label for="uname"><b>Username</b></label>
+    <label for="uname"><b>Desired Username</b></label>
     <input type="text" class="form-control" placeholder="Enter Username" name="uname" required autofocus>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw"><b>Desired Password</b></label>
     <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit" onclick="local_login()" class="btn btn-default">Login</button>
+    <button type="button" onclick="register()" class="btn btn-default">Register</button>
     <div class="checkbox">
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </div>
