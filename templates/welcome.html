@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" href="../styles.css">
 <script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript" src="../js/projects.js"></script>
 
 <style>
 body {
@@ -64,19 +65,68 @@ body {
   <a href="#services" onclick="addProject()">Add Project</a>
   <a href="#clients" onclick="getProject()">Get Project</a>
   <a href="#contact" onclick="generateReport()">Generate Report</a>
+  <a href="#contact" onclick="showUser()">Show Users</a>
+  <div id="logout">
+   <button type="button" class="btn btn-default" onclick="logout()">Logout</button>
+
+ </div>
+  
 </div>
 
 <div class="main">
   
-  <h2 align="center"> Welcome!</h2>
+  <h2 align="center"> Welcome!</h2><hr>
   
+  <!-------------add user---------->
   <div id="addU">
   	Add User.
+
+	  	<div class="form-group" >
+		    <label for="uname"><b>Required Username</b></label>
+		    <input type="text" class="form-control" placeholder="Enter Username" name="uname" required autofocus>
+
+		    <label for="psw"><b>Required Password</b></label>
+		    <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+
+		    <button type="reset" onclick="userAdd()" class="btn btn-default">Register</button>
+		  </div>
+	  <div class="container" style="background-color:#f1f1f1">
+	    
+		</div>
+
+		<br><br>
+
+		<div id="demo">
+			<script>
+				var text = "";
+				var i;
+				for (i = 0; i < usernames.length; i++) {
+				    text += usernames[i] + "<t>" + " | " + user_id[i] + "<br>";
+				}
+
+				document.getElementById("demo").innerHTML = text;
+
+			</script>
+		</div>
+
   </div>
   
   <div id="addP">
   	Add Project.
+    <br>
+    <br>
+
+      First name:
+      <input type="text" id="firstname">
+      <br>
+      <p>Your first name is: <b id='boldStuff2'></b> 
+      </p>
+      <p>Other people's names:</p>
+      <ol id="demo"></ol>
+      <input type='button' onclick='changeText2()' value='Submit' />
+
   </div>
+
   
   <div id="getP">
   	get Project.
@@ -85,8 +135,12 @@ body {
   <div id="genRep">
   	gen Report.
   </div>
-  
-  
+<!---
+  <div id="showUser">
+  	Show User.
+  </div>
+ --->
+
 </div>
      
 </body>
